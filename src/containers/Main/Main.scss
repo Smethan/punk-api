@@ -1,0 +1,8 @@
+.cardContainer {
+	display: flex;
+	flex-flow: row wrap;
+	flex-wrap: wrap;
+	// display: grid;
+	place-items: center;
+	line-height: 1.6;
+}

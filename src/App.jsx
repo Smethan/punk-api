@@ -10,7 +10,7 @@ function App() {
 	const [beerList, setBeerList] = useState([]);
 
 	useEffect(() => {
-		setBeerList(beers);
+		setBeerList([...beers]);
 	}, []);
 
 	return (
