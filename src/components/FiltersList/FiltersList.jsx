@@ -14,7 +14,7 @@ const FiltersList = ({ checked, setChecked, checked2, setChecked2 }) => {
 	// setBeerList(filteredBeer);
 
 	return (
-		<div>
+		<div className="stick2">
 			<Checkbox label="High ABV" handleChange={() => setChecked(!checked)} />
 			<Checkbox label="Acidic" handleChange={() => setChecked2(!checked2)} />
 		</div>

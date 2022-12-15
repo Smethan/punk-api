@@ -34,7 +34,7 @@
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-	height: 5vh;
+	min-height: 7ch;
 
 	text-overflow: ellipsis;
 }

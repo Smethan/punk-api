@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBox.scss";
 
 const SearchBox = (props) => {
 	let { query, setQuery } = props;
@@ -8,8 +9,8 @@ const SearchBox = (props) => {
 	};
 
 	return (
-		<div>
-			<input placeholder="Search here" value={query} onChange={inputHandler}></input>
+		<div className="stick">
+			<input className="input" placeholder="Search here" value={query} onChange={inputHandler}></input>
 		</div>
 	);
 };

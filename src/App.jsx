@@ -11,8 +11,17 @@ function App() {
 	const [displayBeerList, setDisplayBeerList] = useState([]);
 
 	useEffect(() => {
-		setBeerList(beers);
-		setDisplayBeerList(beers);
+		fetch("https://api.punkapi.com/v2/beers?page=1&per_page=80")
+			.then((response) => {
+				if (response.ok) {
+					return response.json();
+				}
+				throw response;
+			})
+			.then((data) => {
+				setBeerList(data);
+				setDisplayBeerList(data);
+			});
 	}, []);
 
 	return (

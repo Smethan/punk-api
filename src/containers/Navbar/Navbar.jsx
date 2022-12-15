@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import FiltersList from "./../../components/FiltersList/FiltersList";
+import "./Navbar.scss";
 
 const Navbar = ({ setBeerList, beerList }) => {
 	const [checked, setChecked] = useState(false);
