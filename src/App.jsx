@@ -8,15 +8,17 @@ import { useEffect } from "react";
 
 function App() {
 	const [beerList, setBeerList] = useState([]);
+	const [displayBeerList, setDisplayBeerList] = useState([]);
 
 	useEffect(() => {
-		setBeerList([...beers]);
+		setBeerList(beers);
+		setDisplayBeerList(beers);
 	}, []);
 
 	return (
 		<div className="App">
-			<Navbar setBeerList={setBeerList} />
-			<Main beerList={beerList} />
+			<Navbar setBeerList={setDisplayBeerList} beerList={beerList} />
+			<Main beerList={displayBeerList} />
 		</div>
 	);
 }
