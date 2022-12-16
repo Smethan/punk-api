@@ -29,7 +29,7 @@ const Navbar = ({ setBeerList, beerList }) => {
 	}, [checked, checked2, query]);
 
 	return (
-		<div>
+		<div className="navbar">
 			<SearchBox query={query} setQuery={setQuery} />
 			<FiltersList checked={checked} setChecked={setChecked} checked2={checked2} setChecked2={setChecked2} />
 		</div>
