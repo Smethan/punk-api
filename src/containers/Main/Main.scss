@@ -5,6 +5,25 @@
 	// display: grid;
 	// place-items: center;
 	justify-content: center;
-	background-color: grey;
 	min-height: 100vh;
+}
+
+.containercontainer {
+	background-color: grey;
+}
+
+button {
+	border-radius: 5px;
+	color: white;
+	background-color: black;
+	width: 200px;
+	height: 50px;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform ease 250ms;
+}
+
+button:hover {
+	transform: scale(1.05);
 }

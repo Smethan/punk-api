@@ -9,9 +9,10 @@ import { useEffect } from "react";
 function App() {
 	const [beerList, setBeerList] = useState([]);
 	const [displayBeerList, setDisplayBeerList] = useState([]);
+	const [page, setPage] = useState(1);
 
 	useEffect(() => {
-		fetch("https://api.punkapi.com/v2/beers?page=1&per_page=80")
+		fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=80`)
 			.then((response) => {
 				if (response.ok) {
 					return response.json();
@@ -22,12 +23,12 @@ function App() {
 				setBeerList(data);
 				setDisplayBeerList(data);
 			});
-	}, []);
+	}, [page]);
 
 	return (
 		<div className="App">
 			<Navbar setBeerList={setDisplayBeerList} beerList={beerList} />
-			<Main beerList={displayBeerList} />
+			<Main beerList={displayBeerList} setPage={setPage} page={page} />
 		</div>
 	);
 }
